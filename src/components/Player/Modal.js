@@ -6,12 +6,12 @@ function Modal({ setIsModal, handleFireWork }) {
                 <div className="wrapper">
                     <div className="modal-content">
                         <div className="title">
-                            Happy Birthday Ngọc Anh
+                            Happy Valentine's Day
                         </div>
                         <div className="body">
-                            Chúc em có một tuổi 23 thật vui vẻ, mong mọi dự định của em sẽ thành hiện thực và trở thành phiên bản tốt nhất của mình nhé !
+                            text
                         </div>
-                        <p className="body">Anh có một món quà nhỏ tặng em, mong rằng em sẽ thích</p>
+                        <p className="body">text</p>
                         <div className="body">
                             <button
                                 type={'button'}

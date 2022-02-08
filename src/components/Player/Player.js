@@ -1,6 +1,10 @@
-import React, {useState, useRef, useEffect} from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Controls from './Controls';
 import Details from './Details';
+import { Slide } from "react-slideshow-image";
+import 'react-slideshow-image/dist/styles.css'
+import ListSong from './ListSong';
+import Lyric from './Lyric';
 
 function Player(props) {
     const audioEl = useRef(null);
@@ -40,11 +44,30 @@ function Player(props) {
         }
     }
 
+    const properties = {
+        duration: 10,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        indicators: true,
+        arrows: false
+    };
+
     return (
         <div className="c-player">
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
             <h4>Now Playing</h4>
-            <Details song={props.songs[props.currentSongIndex]} isPlaying={isPlaying} />
+            <Slide {...properties}>
+                <div>
+                    <Details song={props.songs[props.currentSongIndex]} isPlaying={isPlaying} />
+                </div>
+                <div>
+                    <ListSong isPlaying={isPlaying} setIsPlaying={setIsPlaying} setCurrentSongIndex={props.setCurrentSongIndex} song={props.songs[props.currentSongIndex]} songs={props.songs} />
+                </div>
+                <div>
+                    <Lyric song={props.songs[props.currentSongIndex]} />
+                </div>
+            </Slide>
             <Controls isPlaying={isPlaying} setIsPlaying={setIsPlaying} SkipSong={SkipSong} />
             <p>Next up: <span>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</span></p>
         </div>

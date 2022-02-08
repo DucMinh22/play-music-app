@@ -6,9 +6,7 @@
 }
 
 body {
-    background: #3494E6;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #EC6EAD, #3494E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #4d84f5, #d6c0e7);
 }
 
 .App {
@@ -20,15 +18,13 @@ body {
 
 .c-player {
     display: block;
-    background: #DD5E89;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #F7BB97, #DD5E89);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #F7BB97, #DD5E89); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #0d5caf, #121f50);
     display: block;
     margin: 0px auto;
     padding: 50px 0;
     width: 420px;
     border-radius: 16px;
-    box-shadow: inset -4px -5px 10px rgb(0 0 0 / 35%), inset 0px 0px 1px rgb(255 255 255 / 40%);
+    box-shadow: inset -2px -2px 20px rgb(0 0 0 / 35%), inset 0px 0px 1px rgb(255 255 255 / 40%);
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -62,6 +58,21 @@ body {
     position: relative;
     width: fit-content;
     margin: 0 auto;
+    max-width: 100%;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.c-player--details .details-img:hover {
+    -webkit-transform:scale(1.15); /* Safari and Chrome */
+    -moz-transform:scale(1.15); /* Firefox */
+    -ms-transform:scale(1.15); /* IE 9 */
+    -o-transform:scale(1.15); /* Opera */
+    transform:scale(1.15);
+    border: none;
 }
 
 .c-player--details .details-img img {
@@ -70,9 +81,10 @@ body {
     width: 100%;
     max-width: 250px;
     border-radius: 50%;
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
-    transition: all .3s ease-in-out;
+    /* box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4); */
+    transition: all .5s ease-in-out;
 }
+
 
 .reload img {
     animation: spin 12s linear infinite;
@@ -91,23 +103,22 @@ body {
     right: -25px;
     bottom: -25px;
     border-radius: 50%;
-    border: 3px dashed rgba(255, 206, 0, 1);
 }
 
 .c-player--details .details-title {
     color: white;
     font-size: 28px;
-    text-shadow: 2px 2px 4px rgb(0 0 0 / 70%), -2px -2px 4px rgb(255 255 255 / 40%);
     text-align: center;
     margin-bottom: 10px;
+    font-weight: 400;
 }
 
 .c-player--details .details-artist {
-    color: white;
-    font-size: 20px;
-    text-shadow: 2px 2px 4px rgb(0 0 0 / 70%), -2px -2px 4px rgb(255 255 255 / 40%);
+    color: #d9d9d9;
+    font-size: 15px;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
+    font-weight: 400;
 }
 
 .c-player--controls {
@@ -122,13 +133,18 @@ body {
     margin: 0 30px;
     padding: 20px;
     border-radius: 50%;
-    box-shadow: 4px 4px 10px rgb(0 0 0 / 37%), -4px -4px 10px rgb(255 255 255 / 40%), inset -4px -4px 10px rgb(0 0 0 / 40%), inset 4px 4px 10px rgb(255 255 255 / 40%);
-    border: none;
     outline: none;
-    background-color: #FFCE00;
+    border: 2px solid #FFF;
+    background-color: transparent;
     color: #FFF;
     font-size: 24px;
     cursor: pointer;
+    transition: .3s ease;
+}
+
+.c-player--controls .play-btn:hover {
+    border: 2px solid #3ab4ff;
+    color: #3ab4ff;
 }
 
 .c-player--controls .skip-btn {
@@ -138,6 +154,17 @@ body {
     cursor: pointer;
     color: white;
     font-size: 18px;
+    width: 35px;
+    height: 35px;
+    transition: .3s ease;
+    border-radius: 50%;
+}
+
+.c-player--controls .skip-btn:hover {
+    background-color: #546d99;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
 }
 
 .music-modal, .mask-bg {
@@ -202,4 +229,124 @@ body {
     padding: 15px 40px;
     border-radius: 5px;
     box-shadow: 4px 4px 10px rgb(0 0 0 / 0%), -4px -4px 10px rgb(255 255 255 / 15%), inset -4px -4px 10px rgb(0 0 0 / 40%), inset 4px 4px 10px rgb(255 255 255 / 40%);
+}
+
+.react-slideshow-container+ul.indicators .each-slideshow-indicator::before {
+    background-color: #3ab4ff !important;
+}
+
+.tr--list-song {
+    margin-top: 20px;
+}
+
+.tr--list-song .content .curent-song {
+    background-color: hsla(0,0%,100%,0.1);
+    width: 385px;
+    border-radius: 3px;
+    padding: 10px;
+    color: #FFF;
+    font-size: 15px;
+}
+
+.tr--list-song .content .curent-song .song {
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.tr--list-song .content .curent-song .song .text {
+    width: 25%;
+}
+
+.tr--list-song .content {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0 auto;
+    color: #FFF;
+}
+
+.tr--list-song .content .suggest-songs .details-content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 13px;
+    border-radius: 3px;
+    transition: .2s ease;
+}
+.tr--list-song .content .suggest-songs {
+    max-height: 275px;
+    overflow-y: auto;
+}
+.tr--list-song .content .suggest-songs .active {
+    background-color: hsla(0,0%,100%,0.1);
+}
+
+.tr--list-song .content .suggest-songs .details-content .img-play {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.tr--list-song .content .suggest-songs .details-content .play-btn {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: #FFF;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.tr--list-song .content .suggest-songs .details-content:hover {
+    background-color: hsla(0,0%,100%,0.1);
+}
+
+.tr--list-song .content .suggest-songs .details-content img {
+    width: 35px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.tr--list-song .content .suggest-songs .details-content .name-song {
+    margin-left: 10px;
+}
+
+.tr--list-song .content .suggest-songs .details-content .name-song .singer {
+    color: var(--text-secondary);
+}
+
+.tr--lyric {
+    color: #FFF;
+    word-break: break-word;
+    padding: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-align: justify;
+    max-height: 400px;
+    overflow: hidden auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+width: 6px;
+height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0d5caf;
+    height: 30px; 
+    border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

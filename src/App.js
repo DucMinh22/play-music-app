@@ -8,20 +8,37 @@ function App() {
     {
       title: "For You",
       artist: "Đức Đuđu",
-      img_src: "./images/ngocanh3.jpg",
-      src: "./music/Đôi Lời.m4a"
+      img_src: "./images/IMG_4057.PNG",
+      src: "./music/Đôi Lời.m4a",
+      lyric: "Tình đầu đẹp như mơ Tình đầu đẹp như thơ Tình đầu, ôi ngày xưa ấy sao ngây ngô Chạm mặt lúc học thêm Anh ngại ngùng đến tìm em Tặng em lời giải toán thay lời tỏ tình Nhẹ nhàng mình bên nhau Nhẹ nhàng cầm tay nhau Nhẹ nhàng Cùng nhau đi qua thời niên thiếu Giờ đây có chàng trai Ở bên cạnh một cô gái Tặng nhau thanh xuân đẹp nhất của cả hai Baby ah, you are my favourite Giống như lá rơi khi thu về Lấp lánh hơn Muôn ngàn vì sao từng được thấy Như cà phê sáng sớm Như ánh nắng chiếu qua áng mây Baby ah, you are my favourite Như soái ca bước ra từ truyện tranh Như giấc mơ Tất cả nàng thơ đều yêu thích Thay mặt mọi cô gái trên thế giới Em yêu anh"
     },
     {
       title: "BIRTHDAY",
       artist: "Anne Marie`",
-      img_src: "./images/ngocanh23.jpg",
-      src: "./music/Birthday - Anne-Marie.mp3"
+      img_src: "./images/IMG_4073.JPG",
+      src: "./music/Birthday - Anne-Marie.mp3",
+      lyric: ""
     },
     {
       title: "Twenty-three(스물셋)",
       artist: "IU(아이유)",
-      img_src: "./images/ngocanh4.jpg",
-      src: "./music/Twenty-Three - IU.mp3"
+      img_src: "./images/IMG_3953.PNG",
+      src: "./music/Twenty-Three - IU.mp3",
+      lyric: ""
+    },
+    {
+      title: "For You",
+      artist: "Đức Đuđu",
+      img_src: "./images/IMG_4072.PNG",
+      src: "./music/Đôi Lời.m4a",
+      lyric: "Tình đầu đẹp như mơ Tình đầu đẹp như thơ Tình đầu, ôi ngày xưa ấy sao ngây ngô Chạm mặt lúc học thêm Anh ngại ngùng đến tìm em Tặng em lời giải toán thay lời tỏ tình Nhẹ nhàng mình bên nhau Nhẹ nhàng cầm tay nhau Nhẹ nhàng Cùng nhau đi qua thời niên thiếu Giờ đây có chàng trai Ở bên cạnh một cô gái Tặng nhau thanh xuân đẹp nhất của cả hai Baby ah, you are my favourite Giống như lá rơi khi thu về Lấp lánh hơn Muôn ngàn vì sao từng được thấy Như cà phê sáng sớm Như ánh nắng chiếu qua áng mây Baby ah, you are my favourite Như soái ca bước ra từ truyện tranh Như giấc mơ Tất cả nàng thơ đều yêu thích Thay mặt mọi cô gái trên thế giới Em yêu anh"
+    },
+    {
+      title: "BIRTHDAY",
+      artist: "Anne Marie`",
+      img_src: "./images/IMG_4071.PNG",
+      src: "./music/Birthday - Anne-Marie.mp3",
+      lyric: ""
     },
   ]);
 
@@ -63,7 +80,7 @@ function App() {
       spread: 120,
       startVelocity: 45,
     });
-  
+
   }
 
   /*eslint-disable */
