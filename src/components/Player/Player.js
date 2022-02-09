@@ -66,7 +66,7 @@ function Player(props) {
     return (
         <div className="c-player">
             <audio src={props.songs[props.currentSongIndex].src} ref={audioEl}></audio>
-            <h4>Play</h4>
+            <h4>Now Playing</h4>
             <Slide ref={slideRef} {...properties}>
                 <div>
                     <Details song={props.songs[props.currentSongIndex]} isPlaying={isPlaying} />
