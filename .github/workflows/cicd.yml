@@ -1,0 +1,22 @@
+name: "Deploy master"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: "AKIAVYUYSSM7EQAHNFXV"
+          aws-secret-access-key: "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"
+          aws-region: "us-east-1"
+      - name: Build React App
+        run: npm install && npm run build
+      - name: Deploy app build to S3 bucket
+        run: aws s3 sync ./build/ s3://valentine-day-gift
