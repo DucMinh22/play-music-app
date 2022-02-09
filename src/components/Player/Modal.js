@@ -9,9 +9,9 @@ function Modal({ setIsModal, handleFireWork }) {
                             Happy Valentine's Day
                         </div>
                         <div className="body">
-                            text
+                            Một trong những sự ngọt ngào đầu tiên của anh ! 
                         </div>
-                        <p className="body">text</p>
+                        {/* <p className="body">text</p> */}
                         <div className="body">
                             <button
                                 type={'button'}

@@ -160,7 +160,38 @@ body {
     border-radius: 50%;
 }
 
-.c-player--controls .skip-btn:hover {
+.c-player--controls .favourite {
+    color: #3ab4ff !important;
+}
+
+.c-player--controls .kara-button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    transition: .3s ease;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.c-player--controls .heart-button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+    width: 35px;
+    height: 35px;
+    transition: .3s ease;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+.c-player--controls .skip-btn:hover, .c-player--controls .kara-button:hover, .c-player--controls .heart-button:hover {
     background-color: #546d99;
     width: 35px;
     height: 35px;
@@ -190,9 +221,9 @@ body {
     z-index: 2;
 }
 .music-modal .wrapper .modal-content {
-    background: #FFAFBD;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffc3a0, #FFAFBD); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #6190E8;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A7BFE8, #6190E8);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A7BFE8, #6190E8); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     position: relative;
     width: 700px;
     border-radius: 5px;
@@ -221,8 +252,8 @@ body {
 
 .btn-summit {
     cursor: pointer;
-    background-color: #dc2763;
-    border: 1px solid #dc2763;
+    background-color: #0e68c7;
+    border: 1px solid #0e68c7;
     color: #ffffff;
     text-align: center;
     border: none;
@@ -326,6 +357,7 @@ body {
     text-align: justify;
     max-height: 400px;
     overflow: hidden auto;
+    margin-top: 20px;
 }
 
 /* width */
