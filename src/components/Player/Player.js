@@ -56,6 +56,7 @@ function Player(props) {
 
     const properties = {
         duration: 10,
+        transitionDuration: 800,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
@@ -78,7 +79,7 @@ function Player(props) {
                     <Lyric song={props.songs[props.currentSongIndex]} />
                 </div>
             </Slide>
-            <Controls isPlaying={isPlaying} favoriteSong={favoriteSong} setFavoriteSong={setFavoriteSong} addFavoriteSong={addFavoriteSong} setIsPlaying={setIsPlaying} goto={goto} SkipSong={SkipSong} />
+            <Controls isPlaying={isPlaying} favoriteSong={favoriteSong} song={props.songs[props.currentSongIndex]} setFavoriteSong={setFavoriteSong} addFavoriteSong={addFavoriteSong} setIsPlaying={setIsPlaying} goto={goto} SkipSong={SkipSong} />
             <p>Next up: <span>{props.songs[props.nextSongIndex].title} by {props.songs[props.nextSongIndex].artist}</span></p>
         </div>
     )

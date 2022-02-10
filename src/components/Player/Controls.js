@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPause, faForward, faBackward, faMusic, faHeart } from '@fortawesome/free-solid-svg-icons'
 
 function Controls(props) {
+    const oldSong = localStorage.getItem('favorite');
     return (
         <div className="c-player--controls" style={{ paddingTop: '15px', marginTop: '10px', borderTop: '1px solid rgb(21 64 90)' }}>
             <button className='kara-button' onClick={() => props.goto()}>
@@ -19,10 +20,10 @@ function Controls(props) {
             </button>
             <button className={`${props.favoriteSong ? 'favourite' : ''} heart-button`} onClick={() => {
                 props.setFavoriteSong(!props.favoriteSong);
-                if (props.favoriteSong) {
-                    localStorage.setItem('favorite', 'love');
+                if(oldSong && !oldSong.split(",").includes(props.song.title)) {
+                    localStorage.setItem('favorite', [oldSong, props.song.title]);
                 } else {
-                    localStorage.removeItem('favorite');
+                    localStorage.setItem('favorite', props.song.title);
                 }
             }}>
                 <FontAwesomeIcon icon={faHeart} />
